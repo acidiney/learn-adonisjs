@@ -1,28 +1,22 @@
-# Adonis API application
-
-This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
-
-1. Bodyparser
-2. Authentication
-3. CORS
-4. Lucid ORM
-5. Migrations and seeds
+# Adonis Learn API
+A single project to learn about adonis
 
 ## Setup
-
-Use the adonis command to install the blueprint
-
+1. Install dependencies using
 ```bash
-adonis new yardstick --api-only
+npm install
 ```
-
-or manually clone the repo and then run `npm install`.
-
-
-### Migrations
-
-Run the following command to run startup migrations.
-
-```js
+2. Migrate all migrations
+```bash
 adonis migration:run
 ```
+
+3. Make server alive
+```bash
+adonis serve --dev
+```
+### Test endpoints
+
+I have used the rest-client extension for VSCode to test my endpoint without leave VsCode, You can find all documentation about endpoint in `rest-client` folder, and if you have the extension installed you can simple click on `send request` and see what happens ^^
+
+thanks
