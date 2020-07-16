@@ -1,0 +1,44 @@
+### GET ALL ALBUNS ORDER BY ID DESC
+http://127.0.0.1:3333/albums
+
+### GET ALBUM BY ID
+http://127.0.0.1:3333/albums/11
+
+
+### CREATE A NEW ALBUM
+POST http://127.0.0.1:3333/albums HTTP/1.1
+Content-Type: application/json
+
+{
+  "artist": "Acidiney Dias",
+  "album": "Teste da rota create"
+}
+
+
+### DELETE A NEW ALBUM
+DELETE http://127.0.0.1:3333/albums/10
+
+
+### ADD NEW SONG TO ALBUM
+POST http://127.0.0.1:3333/albums/11/song/add HTTP/1.1
+Content-Type: application/json
+
+{
+  "song": "Oba Oba!"
+}
+
+
+### UPDATE ALBUM PHOTO
+PUT http://127.0.0.1:3333/albums/11/photo
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="text"
+
+album_image
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="album_image"; filename="1.jpeg"
+Content-Type: image/jpeg
+
+< ./1.jpeg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
